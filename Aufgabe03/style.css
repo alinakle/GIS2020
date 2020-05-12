@@ -38,3 +38,10 @@ body {
   main{
     width: 800px;
   }
+  input{
+    width: 50%;
+  padding: 6px 15px;
+  box-sizing: border-box;
+    border: 2px solid rgb(255, 146, 146);
+  border-radius: 4px;
+  }
