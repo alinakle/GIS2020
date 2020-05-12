@@ -1,9 +1,13 @@
 body { 
     background-image: url(bg.png);
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
     width: 800px
 }
+.content {
+  max-width: 800px;
+  margin: auto;
+}
+
 #navbar{
   list-style-type: none;
   margin: 0;
