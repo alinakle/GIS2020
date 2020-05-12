@@ -1,0 +1,17 @@
+body { 
+    background-image: url(bg.png);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+#navbar{
+    overflow: hidden;
+  background-color: rgb(235, 158, 158);
+}
+#navbar a {
+    float: right;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
