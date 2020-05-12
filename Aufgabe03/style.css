@@ -2,16 +2,34 @@ body {
     background-image: url(bg.png);
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    width: 800px
 }
 #navbar{
-    overflow: hidden;
-  background-color: rgb(235, 158, 158);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:rgb(245, 171, 171);
 }
-#navbar a {
-    float: right;
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
+
+#navbar li {
+    float: left;
+  }
+
+#navbar li a {
+  display: block;
+  color: rgb(255, 255, 255), 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navbar li a:hover {
+  background-color: rgb(243, 144, 144);
+}
+
+  #topic{
+    font-weight: 300;
+    color: none;
+    background-color: rgb(255, 217, 226);
   }
