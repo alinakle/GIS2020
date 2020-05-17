@@ -1,68 +1,67 @@
 body { 
     background-image: url(bg.png);
-    font-family: sans-serif ;
+    font-family: sans-serif;
+    color: black;
+
     text-align: center;
-    width: 800px;
 }
 
-#down-triangle { 
-  margin-top: 0;
+#dreieck { 
+  margin-top: -400px;
   margin-left: auto;
   margin-right: auto;
-  width: 800; 
-  height: 800;
-  border-top: 80px solid rgb(255, 217, 226);
+  width: 500px; 
+  height: 250px;
+  border-top: 100px solid rgb(255, 217, 226);
   border-left: 60px solid transparent; 
-  border-right: 60px solid transparent; 
+  border-right: 60px solid transparent;
+  z-index: 5;
 }
 
-#navbar{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.UnterNav:hover{
+  transform:scale(1.4)
+}
+
+.navbar{
+  padding: 30px 100px 30px 100px;
   background-color:rgb(245, 171, 171);
   position: fixed;
   top: 0;
   right: 0;
 }
 
-#navbar li {
-    float: left;
-  }
-
-#navbar li a {
-  display: block;
-  color: rgb(255, 255, 255), 255);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.navbar a:hover {
+  font-style: italic;
 }
 
 #momentan{
-background-color:rgb(245, 200, 200);
+color:black;
 }
 
-#navbar li a:hover {
-  background-color: rgb(243, 144, 144);
+a{
+  text-decoration: none;
+  color: white;
 }
 
   #topic{
     font-size: 50px;
     color: none;
     padding: 30px;
-    text-align: center;
+    z-index: 10;
+    
   }
   #topic p{
-    width: 300px;
     font-size: 10px;
     text-align: center;
+ 
   }
 
-  input{
-    width: 50%;
-  padding: 6px 15px;
-  box-sizing: border-box;
-    border: 2px solid rgb(255, 146, 146);
-  border-radius: 4px;
+  #InstaLink{
+    color: rgb(65, 39, 48);
+    font-weight: bold;
   }
+
+ #Hinweis{
+   font-size: 10px;
+   color: rgb(170, 170, 170);
+ }
