@@ -29,7 +29,7 @@ body {
 }
 
 #momentan{
-color: rgb(102, 102, 102);
+background-color:rgb(245, 200, 200);
 }
 
 #navbar li a:hover {
@@ -37,7 +37,7 @@ color: rgb(102, 102, 102);
 }
 
   #topic{
-    font-size: 70px;
+    font-size: 50px;
     color: none;
     background-color: rgb(255, 217, 226);
     padding: 30px;
@@ -45,9 +45,9 @@ color: rgb(102, 102, 102);
   }
   #topic p{
     width: 300px;
-    right: 0;
+    font-size: 5px;
   }
-  
+
   input{
     width: 50%;
   padding: 6px 15px;
