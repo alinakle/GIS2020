@@ -55,7 +55,8 @@ background-color:rgb(245, 200, 200);
   }
   #topic p{
     width: 300px;
-    font-size: 5px;
+    font-size: 10px;
+    text-align: center;
   }
 
   input{
