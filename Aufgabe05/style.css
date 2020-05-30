@@ -1,0 +1,128 @@
+body{
+    background-color: rgb(235, 207, 172);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+}
+#square{
+    width: 600px; 
+   height: 280px; 
+   background-color: white;
+   position: relative;
+   margin-top: -300px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index:-5;
+  border-radius: 400px;
+}
+.Titel{
+    margin-top: 200px;
+}
+
+.Nav ul{
+    text-align: center;
+    margin: 0;
+    padding: 30px 100px 30px 100px;
+  background-color:rgb(128, 98, 65);
+  position: fixed;
+  top: 0;
+}
+.Nav li {
+    display: inline;
+    list-style: none;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: rgb(128, 98, 65);
+}
+.Nav a:hover {
+    font-style: italic;
+}
+.Nav a{
+    text-decoration: none;
+    color: white;
+}
+
+#momentan{
+color:rgb(235, 204, 163);
+}
+#UnterNav:hover{
+    transform:scale(1.3)
+}
+#UnterNav{
+    position: relative;
+    right: 400px;
+}
+.Auswahl{
+    text-align: center;
+}
+.artikel{
+    width: 40%;
+    height: 550px;
+    text-align: center;
+    margin-top: 4%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border: 0.5;
+    float: left;
+}
+.artikel img{
+    width: 400px;
+    border-style: groove;
+    border-color: black;
+    border: 0.2;
+}
+
+@media only screen and (max-width: 600px) {
+    .artikel img {
+        width: 300px;
+    }
+    .artikel{
+        width: 90%;
+        height: 450px;
+    }
+    #UnterNav{
+        position: relative;
+        left: 200px;
+    }
+}
+    
+@media only screen and (max-width: 600px) {
+        .Titel{
+            margin-top: 150px;
+            width: 500px;
+        }
+
+        #UnterNav{
+            position: relative;
+            right: 100px;
+        }
+}
+
+@media only screen and (max-width: 1024px) {
+    .artikel img {
+        width: 300px;
+    }
+    .artikel{
+        width: 80%;
+        height: 450px;
+    }
+}
+    
+@media only screen and (max-width: 1024px) {
+        .Titel{
+            margin-top: 100px;
+        }
+
+        #UnterNav{
+            position: relative;
+            right: 300px;
+        }
+}
+
+.Auswahl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
