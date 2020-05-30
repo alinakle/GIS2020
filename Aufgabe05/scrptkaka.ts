@@ -24,30 +24,28 @@ namespace Aufgabe05 {
 
     }
 
-    
-
 
     for (let i: number = 0; i < tiere.length; i ++) {
 
-        let neuesDiv: HTMLElement = document.createElement("div");
-        neuesDiv.setAttribute("class", "artikel");
-        document.getElementById("Tiere")?.appendChild(neuesDiv);
+        let neuesDiv2: HTMLElement = document.createElement("div");
+        neuesDiv2.setAttribute("class", "artikel");
+        document.getElementById("Tiere")?.appendChild(neuesDiv2);
 
         let bild: HTMLElement = document.createElement("img");
         bild.setAttribute("src", tiere[i].bild);
-        neuesDiv.appendChild(bild);
+        neuesDiv2.appendChild(bild);
 
         let name: HTMLElement = document.createElement("h4");
         name.innerHTML = tiere[i].name;
-        neuesDiv.appendChild(name);
+        neuesDiv2.appendChild(name);
 
         let preis: HTMLElement = document.createElement("p");
         preis.innerHTML = tiere[i].preis;
-        neuesDiv.appendChild(preis);
+        neuesDiv2.appendChild(preis);
 
         let inhalt: HTMLElement = document.createElement("p");
         preis.innerHTML = tiere[i].inhalt;
-        neuesDiv.appendChild(inhalt);
+        neuesDiv2.appendChild(inhalt);
     }
 
     
