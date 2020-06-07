@@ -95,12 +95,11 @@ var Aufgabe06;
     let haushalti = document.getElementById("HaushaltLink");
     haushalti.addEventListener("click", handleHaushaltLink);
     function handleKlassikerLink() {
-        let safe = document.getElementById("Klassiker");
-        safe.hidden = false;
         let one = document.getElementById("Tiere");
-        one.hidden = true;
+        one.style.display = "none";
         let two = document.getElementById("Haushalt");
-        two.hidden = true;
+        two.style.display = "none";
+        console.log("Hey");
     }
     function handleTiereLink() {
         let safe = document.getElementById("Klassiker");

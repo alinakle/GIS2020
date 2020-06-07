@@ -132,12 +132,11 @@ namespace Aufgabe06 {
     haushalti.addEventListener("click", handleHaushaltLink);
 
     function handleKlassikerLink(): void {
-        let safe: HTMLElement = <HTMLElement> document.getElementById("Klassiker");
-        safe.hidden = false;
         let one: HTMLElement = <HTMLElement> document.getElementById("Tiere");
-        one.hidden = true;
+        one.style.display = "none";
         let two: HTMLElement = <HTMLElement> document.getElementById("Haushalt");
-        two.hidden = true;
+        two.style.display = "none";
+        console.log("Hey");
     }
 
     function handleTiereLink(): void {
