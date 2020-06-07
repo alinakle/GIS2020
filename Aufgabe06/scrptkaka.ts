@@ -136,33 +136,34 @@ namespace Aufgabe06 {
         one.style.display = "none";
         let two: HTMLElement = <HTMLElement> document.getElementById("Haushalt");
         two.style.display = "none";
-        console.log("Hey");
+        let three: HTMLElement = <HTMLElement> document.getElementById("Klassiker");
+        three.style.display = "flex";
     }
 
     function handleTiereLink(): void {
-        let safe: HTMLElement = <HTMLElement> document.getElementById("Klassiker");
-        safe.hidden = false;
         let one: HTMLElement = <HTMLElement> document.getElementById("Klassiker");
-        one.hidden = true;
+        one.style.display = "none";
         let two: HTMLElement = <HTMLElement> document.getElementById("Haushalt");
-        two.hidden = true;
+        two.style.display = "none";
+        let three: HTMLElement = <HTMLElement> document.getElementById("Tiere");
+        three.style.display = "flex";
     }
 
     function handleHaushaltLink(): void {
-        let safe: HTMLElement = <HTMLElement> document.getElementById("Haushalt");
-        safe.hidden = false;
         let one: HTMLElement = <HTMLElement> document.getElementById("Klassiker");
-        one.hidden = true;
+        one.style.display = "none";
         let two: HTMLElement = <HTMLElement> document.getElementById("Tiere");
-        two.hidden = true;
+        two.style.display = "none";
+        let three: HTMLElement = <HTMLElement> document.getElementById("Haushalt");
+        three.style.display = "flex;";
     }
 
     function handleAllesLink(): void {
-        let safe: HTMLElement = <HTMLElement> document.getElementById("Haushalt");
-        safe.hidden = false;
         let one: HTMLElement = <HTMLElement> document.getElementById("Klassiker");
-        one.hidden = false;
+        one.style.display = "flex";
         let two: HTMLElement = <HTMLElement> document.getElementById("Tiere");
-        two.hidden = false;
+        two.style.display = "flex";
+        let three: HTMLElement = <HTMLElement> document.getElementById("Haushalt");
+        three.style.display = "flex;";
     }
 }

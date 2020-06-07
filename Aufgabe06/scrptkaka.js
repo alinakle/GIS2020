@@ -99,31 +99,32 @@ var Aufgabe06;
         one.style.display = "none";
         let two = document.getElementById("Haushalt");
         two.style.display = "none";
-        console.log("Hey");
+        let three = document.getElementById("Klassiker");
+        three.style.display = "flex";
     }
     function handleTiereLink() {
-        let safe = document.getElementById("Klassiker");
-        safe.hidden = false;
         let one = document.getElementById("Klassiker");
-        one.hidden = true;
+        one.style.display = "none";
         let two = document.getElementById("Haushalt");
-        two.hidden = true;
+        two.style.display = "none";
+        let three = document.getElementById("Tiere");
+        three.style.display = "flex";
     }
     function handleHaushaltLink() {
-        let safe = document.getElementById("Haushalt");
-        safe.hidden = false;
         let one = document.getElementById("Klassiker");
-        one.hidden = true;
+        one.style.display = "none";
         let two = document.getElementById("Tiere");
-        two.hidden = true;
+        two.style.display = "none";
+        let three = document.getElementById("Haushalt");
+        three.style.display = "flex;";
     }
     function handleAllesLink() {
-        let safe = document.getElementById("Haushalt");
-        safe.hidden = false;
         let one = document.getElementById("Klassiker");
-        one.hidden = false;
+        one.style.display = "flex";
         let two = document.getElementById("Tiere");
-        two.hidden = false;
+        two.style.display = "flex";
+        let three = document.getElementById("Haushalt");
+        three.style.display = "flex;";
     }
 })(Aufgabe06 || (Aufgabe06 = {}));
 //# sourceMappingURL=scrptkaka.js.map
