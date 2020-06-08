@@ -116,7 +116,7 @@ var Aufgabe06;
         let two = document.getElementById("Tiere");
         two.style.display = "none";
         let three = document.getElementById("Haushalt");
-        three.style.display = "flex;";
+        three.style.display = "flex";
     }
     function handleAllesLink() {
         let one = document.getElementById("Klassiker");
