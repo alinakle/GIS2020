@@ -155,7 +155,7 @@ namespace Aufgabe06 {
         let two: HTMLElement = <HTMLElement> document.getElementById("Tiere");
         two.style.display = "none";
         let three: HTMLElement = <HTMLElement> document.getElementById("Haushalt");
-        three.style.display = "flex;";
+        three.style.display = "flex";
     }
 
     function handleAllesLink(): void {
