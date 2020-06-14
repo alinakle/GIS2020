@@ -1,0 +1,86 @@
+[
+    {
+        "_bild":"Familie.jpg",
+        "_name":"We Are Familia",
+        "_preis":1,
+        "_inhalt":"Ein eindeutiges Statment in cooler Schrift",
+        "_kategorie": "Klassiker"
+    },
+    {
+        "_bild":"Rose.jpg",
+        "_name":"All The Single Roses",
+        "_preis":4,
+        "_inhalt":"Das zeitlose Motiv der Rose. Ein muss für jede starke Frau",
+        "_kategorie": "Klassiker"
+    },
+    {
+        "_bild":"Skull.jpg",
+        "_name":"Schicker Schädel",
+        "_preis":5,
+        "_inhalt":"Egal ob harter Rocker oder Schulabbrecher, dieses Motiv ist ein Hingucker",
+        "_kategorie": "Klassiker"
+    },
+    {
+        "_bild":"Anker.jpg",
+        "_name":"Nicht ganz so Old School Anker",
+        "_preis":3,
+        "_inhalt":"Das klassische Motiv im neuen Stil",
+        "_kategorie": "Klassiker"
+    },
+    {
+        "_bild":"Pferd.jpg",
+        "_name":"Skatendes Pferd",
+        "_preis":6,
+        "_inhalt":"Für jeden der daran glaubt, das alles möglich ist",
+        "_kategorie": "Tiere"
+    },
+    {
+        "_bild":"VampCat.jpg",
+        "_name":"Böse Katze",
+        "_preis":2,
+        "_inhalt":"Ein Motiv für jeden der Katzen-Tattoos mag, aber Katzen nicht",
+        "_kategorie": "Tiere"
+    },
+    {
+        "_bild":"Katze.jpg",
+        "_name":"Gähnende Katze",
+        "_preis":5,
+        "_inhalt":"Gegenstück zum klassischen 'Brüllender Löwe'-Motiv",
+        "_kategorie": "Tiere"
+    },
+    {
+        "_bild":"Faultier.jpg",
+        "_name":"Abhängendes Faultier",
+        "_preis":4,
+        "_inhalt":"Simples Faultier Design für simple Abhänger",
+        "_kategorie": "Tiere"
+    },
+    {
+        "_bild":"Laptop.jpg",
+        "_name":"Aufgeklappter Laptop",
+        "_preis":4,
+        "_inhalt":"Ein Liebesbeweis an jemanden der immer für einen da ist",
+        "_kategorie": "Haushalt"
+    },
+    {
+        "_bild":"Tempos.jpg",
+        "_name":"Box voll Tücher",
+        "_preis":5,
+        "_inhalt":"Immer gut, wenn man Taschentücher dabei hat",
+        "_kategorie": "Haushalt"
+    },
+    {
+        "_bild":"Shirt.jpg",
+        "_name":"Simples T-Shirt",
+        "_preis":2,
+        "_inhalt":"Nie wieder sorgen machen wegen Eregung öffentlichen Ärgernisses, da sie ja immer ein Shirt haben",
+        "_kategorie": "Haushalt"
+    },
+    {
+        "_bild":"Tape.jpg",
+        "_name":"Angefangene Rolle Tape",
+        "_preis":4,
+        "_inhalt":"Man findest sie nie wenn man sie braucht, also aufs Bein damit",
+        "_kategorie": "Haushalt"
+    }
+]
