@@ -1,7 +1,7 @@
 namespace Aufgabe07 {
 
     let liste: Artikel[] = JSON.parse(localStorage.getItem("liste")!);
-    let warenkorbDiv: HTMLElement = <HTMLElement> document.getElementById("WagenkorbInhalt");
+    let warenkorbDiv: HTMLElement = <HTMLElement> document.getElementById("WarenkorbInhalt");
 
     for (let i: number = 0; i < liste.length; i++) {
 
@@ -59,5 +59,6 @@ namespace Aufgabe07 {
         let neuerPreis: number = JSON.parse(localStorage.getItem("warenwert")!);
         neuerPreis -= preis;
         localStorage.setItem("warenwert", JSON.stringify(neuerPreis));
+        window.location.reload();
     }
 }

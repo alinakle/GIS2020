@@ -2,7 +2,7 @@
 var Aufgabe07;
 (function (Aufgabe07) {
     let liste = JSON.parse(localStorage.getItem("liste"));
-    let warenkorbDiv = document.getElementById("WagenkorbInhalt");
+    let warenkorbDiv = document.getElementById("WarenkorbInhalt");
     for (let i = 0; i < liste.length; i++) {
         let divArtikel = document.createElement("div");
         divArtikel.setAttribute("class", "artikel");
@@ -45,6 +45,7 @@ var Aufgabe07;
         let neuerPreis = JSON.parse(localStorage.getItem("warenwert"));
         neuerPreis -= preis;
         localStorage.setItem("warenwert", JSON.stringify(neuerPreis));
+        window.location.reload();
     }
 })(Aufgabe07 || (Aufgabe07 = {}));
 //# sourceMappingURL=warenkorb.js.map

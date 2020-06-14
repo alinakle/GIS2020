@@ -64,11 +64,25 @@ body{
     border: 0.5;
     float: left;
 }
+
 .artikel img{
     width: 400px;
     border-style: groove;
     border-color: black;
     border: 0.2;
+}
+
+#WarenkorbInhalt{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#WarenkorbInhalt img{
+    width: 400px;
+    border-style: groove;
+    border-color: black;
+    border: 0.2;  
 }
 
 @media only screen and (max-width: 600px) {
