@@ -27,7 +27,7 @@ namespace Aufgabe07 {
         let loeschen: HTMLElement = document.createElement("button");
         loeschen.innerHTML = "Entfernen";
         divArtikel.appendChild(loeschen);
-        loeschen.setAttribute("index", "" + liste[i])
+        loeschen.setAttribute("index", "" + liste[i]);
         loeschen.setAttribute("preis", "" + liste[i]._preis);
         loeschen.addEventListener("click", handleEntfernen);
 
