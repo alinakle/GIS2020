@@ -1,0 +1,19 @@
+{
+  "name": "gisak2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":  "node Aufgabe08/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinakle/GIS2020.git"
+  },
+  "author": "Alina Klein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alinakle/GIS2020/issues"
+  },
+  "homepage": "https://github.com/alinakle/GIS2020#readme"
+}
