@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Aufgabe08 = void 0;
+exports.Aufgabe09 = void 0;
 const Http = require("http");
-var Aufgabe08;
-(function (Aufgabe08) {
+const url = require("url");
+var Aufgabe09;
+(function (Aufgabe09) {
     console.log("Starting server");
     let port = Number(process.env.PORT);
     if (!port)
@@ -16,11 +17,22 @@ var Aufgabe08;
         console.log("Listening");
     }
     function handleRequest(_request, _response) {
-        console.log("I hear voices!");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        _response.write(_request.url);
+        console.log("I hear voices!");
+        if (_request.url) {
+            let q = url.parse(_request.url, true);
+            if (q.pathname == "/html") {
+                for (let key in q.query) {
+                    _response.write(key + ": " + q.query[key] + "<br/>");
+                }
+            }
+            else if (q.pathname == "/json") {
+                let jsonString = JSON.stringify(q.query);
+                _response.write(jsonString);
+            }
+        }
         _response.end();
     }
-})(Aufgabe08 = exports.Aufgabe08 || (exports.Aufgabe08 = {}));
+})(Aufgabe09 = exports.Aufgabe09 || (exports.Aufgabe09 = {}));
 //# sourceMappingURL=server.js.map

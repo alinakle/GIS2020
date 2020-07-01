@@ -1,21 +1,31 @@
 "use strict";
-var Aufgabe08;
-(function (Aufgabe08) {
-    let knopf = document.getElementById("abschicken");
-    knopf?.addEventListener("click", handleKnopf);
-    async function handleKnopf() {
-        let formData = new FormData(document.forms[0]);
-        let url = "https://gisak2020.herokuapp.com/";
+var Aufgabe09;
+(function (Aufgabe09) {
+    let htmlButton = document.getElementById("html");
+    htmlButton?.addEventListener("click", handleHtml);
+    let jsonButton = document.getElementById("json");
+    jsonButton?.addEventListener("click", handleJson);
+    let formData;
+    async function handleHtml() {
+        formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
+        let url = "https://gisak2020.herokuapp.com/";
+        url = url + "/html";
         url = url + "?" + query.toString();
         let answer = await fetch(url);
-        let answer2 = answer.url;
-        console.log(answer2);
-        for (let entry of formData) {
-            console.log(entry);
-            console.log("name: " + entry[0]);
-            console.log("value: " + entry[1]);
-        }
+        let answer2 = await answer.text();
+        let answerHTML = document.getElementById("answerHTML");
+        answerHTML.innerHTML = answer2;
     }
-})(Aufgabe08 || (Aufgabe08 = {}));
+    async function handleJson() {
+        formData = new FormData(document.forms[0]);
+        let query = new URLSearchParams(formData);
+        let url = "https://gisak2020.herokuapp.com/";
+        url = url + "/json";
+        url = url + "?" + query.toString();
+        let answer = await fetch(url);
+        let answer2 = await answer.json();
+        console.log(answer2);
+    }
+})(Aufgabe09 || (Aufgabe09 = {}));
 //# sourceMappingURL=script.js.map
