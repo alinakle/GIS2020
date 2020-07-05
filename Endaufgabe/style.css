@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(255, 249, 241);
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: left;
+}
+
+#top{
+    background: url(Bilder/BGOben.png) no-repeat center center fixed;
+}
