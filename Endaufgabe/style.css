@@ -1,9 +1,58 @@
 body{
     background-color: rgb(255, 249, 241);
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: left;
 }
 
 #top{
-    background: url(Bilder/BGOben.png) no-repeat center center fixed;
+    text-align: center;
+    margin-top: 0%;
+    background-image: url(Bilder/BG.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.Menu ul{
+    text-align: center;
+    margin-top: 0%;
+    padding: 20px 80px 30px 80px; 
+    background-color:rgb(238, 151, 151);
+    position: fixed;
+    top: 0;
+}
+.Menu li {
+    display: inline;
+    list-style: none;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: rgb(238, 151, 151);
+}
+.Menu a:hover {
+    font-style: italic;
+}
+.Menu a{
+    text-decoration: none;
+    color: white;
+}
+#UnterNav:hover{
+    transform:scale(1.3);
+}
+.Auswahl{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.artikel{
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    margin-top: 4%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    float: left;
+    background-color: rgb(238, 151, 151);
+}
+.artikel img{
+    width: 50%;
 }

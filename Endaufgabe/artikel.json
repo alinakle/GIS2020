@@ -1,0 +1,143 @@
+[
+    
+    {
+        "_bild": "Bilder/Becher.png" ,
+        "_name": "Ice Cream Cup" ,
+        "_preis": "0" ,
+        "_inhalt": "If you want to safe the carbs" ,
+        "_kategorie": "Base"
+    }, 
+    {
+        "_bild": "Bilder/Waffel.png" ,
+        "_name": "Ice Cream Cone" ,
+        "_preis": "0" ,
+        "_inhalt": "Your no-waste-alternative" ,
+        "_kategorie": "Base"
+    }, 
+    {
+        "_bild": "Bilder/Vanille.png" ,
+        "_name": "Venerable Vanilla" ,
+        "_preis": "2" ,
+        "_inhalt": "The vanilla taste of your dreams" ,
+        "_kategorie": "Eis"
+    }, 
+    {
+        "_bild": "Bilder/Schokolade.png" ,
+        "_name": "Comforting Chocolate" ,
+        "_preis": "2" ,
+        "_inhalt": "The ice cream to your heart" ,
+        "_kategorie": "Eis"
+    }, 
+    {
+        "_bild": "Bilder/Erdbeer.png" ,
+        "_name": "Savage Strawberry" ,
+        "_preis": "2" ,
+        "_inhalt": "Classic, bougie, ratchet" ,
+        "_kategorie": "Eis"
+    }, 
+    {
+        "_bild": "Bilder/Blaubeere.png" ,
+        "_name": "Beautiful Blueberry" ,
+        "_preis": "2" ,
+        "_inhalt": "Almost too pretty to eat" ,
+        "_kategorie": "Eis"
+    }, 
+    {
+        "_bild": "Bilder/Pfirsich.png" ,
+        "_name": "Pleasant Peach" ,
+        "_preis": "2" ,
+        "_inhalt": "Makes you feel like home" ,
+        "_kategorie": "Eis"
+    }, 
+    {
+        "_bild": "Bilder/Mango.png" ,
+        "_name": "Mouthwatering Mango" ,
+        "_preis": "2" ,
+        "_inhalt": "Do you already feel it?" ,
+        "_kategorie": "Eis"
+    }, 
+    {
+        "_bild": "Bilder/Oreo.png" ,
+        "_name": "Old-fashioned Oreo" ,
+        "_preis": "2" ,
+        "_inhalt": "Old but gold" ,
+        "_kategorie": "Eis"
+    }, 
+    {
+        "_bild": "Bilder/Durian.png" ,
+        "_name": "Delicious Durian" ,
+        "_preis": "2" ,
+        "_inhalt": "A taste you don't want to miss" ,
+        "_kategorie": "Eis"
+    }, 
+    {
+        "_bild": "Bilder/Matcha.png" ,
+        "_name": "Marvelous Matcha" ,
+        "_preis": "3" ,
+        "_inhalt": "The most instagramable ice cream out there" ,
+        "_kategorie": "Eis"
+    }, 
+    {
+        "_bild": "Bilder/Streusel.png" ,
+        "_name": "Sprinkles" ,
+        "_preis": "1" ,
+        "_inhalt": "The old time classic" ,
+        "_kategorie": "Toppings"
+    }, 
+    {
+        "_bild": "Bilder/Reeses.png" ,
+        "_name": "Reeses" ,
+        "_preis": "1" ,
+        "_inhalt": "The peanutbutter topping of always wanted" ,
+        "_kategorie": "Toppings"
+    }, 
+    {
+        "_bild": "Bilder/Nüsse.png" ,
+        "_name": "Nuts" ,
+        "_preis": "1" ,
+        "_inhalt": "To tell yourself your eating healthy" ,
+        "_kategorie": "Toppings"
+    }, 
+    {
+        "_bild": "Bilder/Ananas.png" ,
+        "_name": "Pineapple" ,
+        "_preis": "1" ,
+        "_inhalt": "Not on pizza, but on ice cream" ,
+        "_kategorie": "Toppings"
+    }, 
+    {
+        "_bild": "Bilder/Kirschen.png" ,
+        "_name": "Cherrys" ,
+        "_preis": "1" ,
+        "_inhalt": "For all the cherry cherry ladies out there" ,
+        "_kategorie": "Toppings"
+    }, 
+    {
+        "_bild": "Bilder/Brombeere.png" ,
+        "_name": "Blackberry" ,
+        "_preis": "1" ,
+        "_inhalt": "A throwback to the 2000s" ,
+        "_kategorie": "Toppings"
+    }, 
+    {
+        "_bild": "Bilder/Sahne.png" ,
+        "_name": "Whipped Cream" ,
+        "_preis": "1" ,
+        "_inhalt": "'Cause we all need a little whip sometimes" ,
+        "_kategorie": "Toppings"
+    }, 
+    {
+        "_bild": "Bilder/Karamell.png" ,
+        "_name": "Caramell Sauce" ,
+        "_preis": "1" ,
+        "_inhalt": "" ,
+        "_kategorie": "Toppings"
+    }, 
+    {
+        "_bild": "Bilder/Baileys.png" ,
+        "_name": "Baileys" ,
+        "_preis": "1" ,
+        "_inhalt": "The twist you need at 4 o'clock" ,
+        "_kategorie": "Toppings"
+    }
+]

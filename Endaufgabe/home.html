@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream Shop | Home</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="icon" type="image/png" href="Bilder/Logo.png">
+    <script src="import.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,7 +15,29 @@
             <img src="Bilder/Logo.png" alt="Logo">
         </div>
     </header>
-    <main></main>
+    <main>
+        <div class="Menu">
+            <ul>
+                <li><a id="allMenu">Alles</a></li>
+                <li><a id="ToppingsMenu">Base</a></li>
+                <li><a id="eisMenu" >Eis</a></li>
+                <li><a id="ToppingsMenu">Toppings</a></li>
+                <li id="WarenDing"><a href="warenkorb.html"><img id="UnterNav" src="Bilder/Warenkorb.png" alt="Warenkorb" width="40"></a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Base</h2>
+            <div class="Auswahl" id="Base"></div>
+        </div>
+        <div>
+            <h2>Eis</h2>
+            <div class="Auswahl" id="Eis"></div>
+        </div>
+        <div>
+            <h2>Toppings</h2>
+            <div class="Auswahl" id="Toppings"></div>
+        </div>
+    </main>
     <footer></footer>
     
 </body>

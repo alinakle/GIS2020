@@ -10,7 +10,7 @@ namespace Aufgabe09 {
 
     async function handleHtml(): Promise<void> {
 
-        formData= new FormData(document.forms[0]);
+        formData = new FormData(document.forms[0]);
 
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         let url: string = "https://gisak2020.herokuapp.com/";

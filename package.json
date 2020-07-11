@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":  "node Aufgabe09/server.js"
+    "start": "node Aufgabe11/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/alinakle/GIS2020/issues"
   },
-  "homepage": "https://github.com/alinakle/GIS2020#readme"
+  "homepage": "https://github.com/alinakle/GIS2020#readme",
+  "dependencies": {
+    "@types/mongodb": "^3.5.25",
+    "mongodb": "^3.5.9"
+  }
 }
