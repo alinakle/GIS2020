@@ -1,5 +1,6 @@
 namespace Endaufgabe {
 
+    // Zum genergieren von den Artikeln
     let base: HTMLElement = <HTMLElement>document.getElementById("Base");
     let eis: HTMLElement = <HTMLElement>document.getElementById("Eis");
     let toppings: HTMLElement = <HTMLElement>document.getElementById("Toppings");
@@ -8,22 +9,22 @@ namespace Endaufgabe {
 
         let response: Response = await fetch(_url);
         let content: Artikel[] = await response.json();
-
+        
         for (let i: number = 0; i < content.length; i++) {
 
             let divArtikel: HTMLElement = <HTMLElement>document.createElement("div");
             divArtikel.setAttribute("class", "artikel");
 
-            if (content[i]._kategorie == "Base") {
-                base?.appendChild(divArtikel);
+            if (content[i]._kategorie == "Toppings") {
+                toppings?.appendChild(divArtikel);
             }
 
             if (content[i]._kategorie == "Eis") {
                 eis?.appendChild(divArtikel);
             }
 
-            else {
-                toppings?.appendChild(divArtikel);
+            if (content[i]._kategorie == "Base") {
+                base?.appendChild(divArtikel);
             }
 
             let bild: HTMLElement = document.createElement("img");
@@ -103,48 +104,52 @@ namespace Endaufgabe {
         localStorage.setItem("liste", JSON.stringify(liste));
 
         localStorage.setItem("warenwert", JSON.stringify(warenwert));
+
+        // Div in dem aktuelle Bestellung Angezeigt wird
+
+        
+        let list: Artikel[] = JSON.parse(localStorage.getItem("liste")!);
+        let warenkorbDiv: HTMLElement = <HTMLElement> document.getElementById("Auflistung");
+        let schrift: HTMLElement = document.createElement("h5");
+        schrift.innerHTML = ("Momentane Auswahl");
+        warenkorbDiv.innerHTML = "";
+        warenkorbDiv.appendChild(schrift);
+
+        for (let i: number = 0; i < list.length; i++) {
+
+            let divArtikel: HTMLElement = <HTMLElement>document.createElement("div");
+            divArtikel.setAttribute("class", "sidebarArtikel");
+
+            let bild: HTMLElement = document.createElement("img");
+            bild.setAttribute("src", list[i]._bild);
+            divArtikel.appendChild(bild);
+
+            let name: HTMLElement = document.createElement("h4");
+            name.innerHTML = list[i]._name;
+            divArtikel.appendChild(name);
+
+            let preis: HTMLElement = document.createElement("p");
+            preis.innerHTML = "" + list[i]._preis + "€";
+            divArtikel.appendChild(preis);
+
+            warenkorbDiv?.appendChild(divArtikel);
+        }
+
     }
 
 
-    // Anzeige von Nur ausgewählten Aritkeln
-    let allesi: HTMLElement = <HTMLElement>document.getElementById("momentan");
-    allesi.addEventListener("click", handleAllesLink);
+    // Anzeige von Nur ausgewählten Aritkeln im Menü
+    let allesM: HTMLElement = <HTMLElement>document.getElementById("allMenu");
+    allesM.addEventListener("click", handleAllesLink);
 
-    let klassi: HTMLElement = <HTMLElement>document.getElementById("KlassikerLink");
-    klassi.addEventListener("click", handleKlassikerLink);
+    let baseM: HTMLElement = <HTMLElement>document.getElementById("BaseMenu");
+    baseM.addEventListener("click", handleBaseLink);
 
-    let tieri: HTMLElement = <HTMLElement>document.getElementById("TiereLink");
-    tieri.addEventListener("click", handleTiereLink);
+    let eisM: HTMLElement = <HTMLElement>document.getElementById("EisMenu");
+    eisM.addEventListener("click", handleEisLink);
 
-    let haushalti: HTMLElement = <HTMLElement>document.getElementById("HaushaltLink");
-    haushalti.addEventListener("click", handleHaushaltLink);
-
-    function handleKlassikerLink(): void {
-        let one: HTMLElement = <HTMLElement>document.getElementById("Tiere");
-        one.style.display = "none";
-        let two: HTMLElement = <HTMLElement>document.getElementById("Haushalt");
-        two.style.display = "none";
-        let three: HTMLElement = <HTMLElement>document.getElementById("Klassikef");
-        three.style.display = "flex";
-    }
-
-    function handleTiereLink(): void {
-        let one: HTMLElement = <HTMLElement>document.getElementById("Klassiker");
-        one.style.display = "none";
-        let two: HTMLElement = <HTMLElement>document.getElementById("Haushalt");
-        two.style.display = "none";
-        let three: HTMLElement = <HTMLElement>document.getElementById("Tiere");
-        three.style.display = "flex";
-    }
-
-    function handleHaushaltLink(): void {
-        let one: HTMLElement = <HTMLElement>document.getElementById("Klassiker");
-        one.style.display = "none";
-        let two: HTMLElement = <HTMLElement>document.getElementById("Tiere");
-        two.style.display = "none";
-        let three: HTMLElement = <HTMLElement>document.getElementById("Haushalt");
-        three.style.display = "flex";
-    }
+    let toppingsM: HTMLElement = <HTMLElement>document.getElementById("ToppingsMenu");
+    toppingsM.addEventListener("click", handleToppingsLink);
 
     function handleAllesLink(): void {
         let one: HTMLElement = <HTMLElement>document.getElementById("Klassiker");
@@ -153,5 +158,32 @@ namespace Endaufgabe {
         two.style.display = "flex";
         let three: HTMLElement = <HTMLElement>document.getElementById("Haushalt");
         three.style.display = "flex;";
+    }
+
+    function handleBaseLink(): void {
+        let one: HTMLElement = <HTMLElement>document.getElementById("Tiere");
+        one.style.display = "none";
+        let two: HTMLElement = <HTMLElement>document.getElementById("Haushalt");
+        two.style.display = "none";
+        let three: HTMLElement = <HTMLElement>document.getElementById("Klassikef");
+        three.style.display = "flex";
+    }
+
+    function handleEisLink(): void {
+        let one: HTMLElement = <HTMLElement>document.getElementById("Klassiker");
+        one.style.display = "none";
+        let two: HTMLElement = <HTMLElement>document.getElementById("Haushalt");
+        two.style.display = "none";
+        let three: HTMLElement = <HTMLElement>document.getElementById("Tiere");
+        three.style.display = "flex";
+    }
+
+    function handleToppingsLink(): void {
+        let one: HTMLElement = <HTMLElement>document.getElementById("Klassiker");
+        one.style.display = "none";
+        let two: HTMLElement = <HTMLElement>document.getElementById("Tiere");
+        two.style.display = "none";
+        let three: HTMLElement = <HTMLElement>document.getElementById("Haushalt");
+        three.style.display = "flex";
     }
 }

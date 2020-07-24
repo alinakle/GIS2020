@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ice Cream Shop | Bestellungen</title>
+    <title>Ice Cream Shop | Warenkorb</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="Bilder/Logo.png">
+    <script src="import.js"></script>
+    <script src="warenkorbscript.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,12 +18,29 @@
     <main>
         <div class="Menu">
             <ul>
-                <li><a id="allMenu">Alles</a></li>
-                <li><a id="ToppingsMenu">Base</a></li>
-                <li><a id="eisMenu" >Eis</a></li>
+                <li><a href="home.html" id="allMenu">Alles</a></li>
+                <li><a id="BaseMenu">Base</a></li>
+                <li><a id="EisMenu" >Eis</a></li>
                 <li><a id="ToppingsMenu">Toppings</a></li>
                 <li id="WarenDing"><a href="warenkorb.html"><img id="UnterNav" src="Bilder/Warenkorb.png" alt="Warenkorb" width="40"></a></li>
             </ul>
+        </div>
+        <div>
+            <h2>Warenkorb Inhalt</h2>
+            <div id="Inhalt"></div>
+        </div>
+        <div>
+            <h2>Gesamtwert ihres Einkaufs: <div id="GesamtWert"></h2>
+            <input type="button" value="Alles Entfernen" id="EntfernenButton"/>
+            <br>
+            <br>
+            <br>
+            <div id=form>
+                <input type="text" id="name" name="name" placeholder="Voller Name">
+                <br>
+                <input type="text" id="email" name="email" placeholder="Ihre E-Mail Adresse">
+                <input type="button" value="Absenden" id="SendButton"/>
+            </div>
         </div>
     </main>
     <footer>
@@ -33,9 +52,10 @@
                 <li><img src="Bilder/Footer/Glutenfree.png" alt="Glutenfree"></li>
                 <li><p>Vegan</p></li>
                 <li><img src="Bilder/Footer/Vegan.png" alt="Vegan"></li>
-                <li class="goToPrivate"><a href="home.html"><img src="Bilder/Footer/Safety.png" alt="Private"></a></li>
+                <li class="goToPrivate"><a href="bestellungen.html"><img src="Bilder/Footer/Safety.png" alt="Private"></a></li>
             </ul>
         </div>
     </footer>
+    
 </body>
 </html>

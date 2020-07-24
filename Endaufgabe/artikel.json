@@ -88,7 +88,7 @@
         "_bild": "Bilder/Reeses.png" ,
         "_name": "Reeses" ,
         "_preis": "1" ,
-        "_inhalt": "The peanutbutter topping of always wanted" ,
+        "_inhalt": "The peanutbutter topping you always wanted" ,
         "_kategorie": "Toppings"
     }, 
     {
@@ -130,7 +130,7 @@
         "_bild": "Bilder/Karamell.png" ,
         "_name": "Caramell Sauce" ,
         "_preis": "1" ,
-        "_inhalt": "" ,
+        "_inhalt": "What is sweet and sticky and crosses the desert? A caramel" ,
         "_kategorie": "Toppings"
     }, 
     {

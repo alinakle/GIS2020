@@ -45,10 +45,7 @@ body{
 #UnterNav:hover{
     transform:scale(1.3)
 }
-/*#UnterNav{
-    position: relative;
-    right: 400px;
-} */
+
 .Auswahl{
     text-align: center;
 }
