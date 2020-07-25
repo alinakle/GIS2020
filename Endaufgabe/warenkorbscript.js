@@ -47,5 +47,16 @@ var Endaufgabe;
         localStorage.setItem("warenwert", JSON.stringify(neuerPreis));
         window.location.reload();
     }
+    let sendButton = document.getElementById("SendButton");
+    sendButton?.addEventListener("click", handleSend);
+    let formData;
+    async function handleSend() {
+        formData = new FormData(document.forms[0]);
+        let query = new URLSearchParams(formData);
+        let url = "https://gisak2020.herokuapp.com";
+        url = url + "/send";
+        url = url + "?" + query.toString();
+        await fetch(url);
+    }
 })(Endaufgabe || (Endaufgabe = {}));
 //# sourceMappingURL=warenkorbscript.js.map

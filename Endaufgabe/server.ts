@@ -2,14 +2,14 @@ import * as Http from "http";
 import * as url from "url";
 import * as Mongo from "mongodb";
 
-export namespace Aufgabe11 {
+export namespace Endaufgabe {
 
     interface Answer {
         [type: string]: string | string[];
     }
 
     let answers: Mongo.Collection;
-    let databaseUrl: string = "mongodb+srv://new-user:123654@alina.ikm1m.mongodb.net/A11?retryWrites=true&w=majority";
+    let databaseUrl: string = "mongodb+srv://new-user:123654@alina.ikm1m.mongodb.net/Abgabe?retryWrites=true&w=majority";
 
     let port: number = Number(process.env.PORT);
     if (!port)
@@ -37,7 +37,7 @@ export namespace Aufgabe11 {
         let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        answers = mongoClient.db("A11").collection("Answers");
+        answers = mongoClient.db("Abgabe").collection("Eis");
     }
 
     startServer(port);

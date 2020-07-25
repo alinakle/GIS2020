@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Aufgabe11 = void 0;
+exports.Endaufgabe = void 0;
 const Http = require("http");
 const url = require("url");
 const Mongo = require("mongodb");
-var Aufgabe11;
-(function (Aufgabe11) {
+var Endaufgabe;
+(function (Endaufgabe) {
     let answers;
-    let databaseUrl = "mongodb+srv://new-user:123654@alina.ikm1m.mongodb.net/A11?retryWrites=true&w=majority";
+    let databaseUrl = "mongodb+srv://new-user:123654@alina.ikm1m.mongodb.net/Abgabe?retryWrites=true&w=majority";
     let port = Number(process.env.PORT);
     if (!port)
         port = 8100;
@@ -25,7 +25,7 @@ var Aufgabe11;
         let options = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        answers = mongoClient.db("A11").collection("Answers");
+        answers = mongoClient.db("Abgabe").collection("Eis");
     }
     startServer(port);
     connectToDatabase(databaseUrl);
@@ -47,5 +47,5 @@ var Aufgabe11;
     function storeAnswers(_answer) {
         answers.insertOne(_answer);
     }
-})(Aufgabe11 = exports.Aufgabe11 || (exports.Aufgabe11 = {}));
+})(Endaufgabe = exports.Endaufgabe || (exports.Endaufgabe = {}));
 //# sourceMappingURL=server.js.map

@@ -117,3 +117,128 @@ footer{
 .sidebarArtikel img{
     width: 70%;
 }
+#EntfernenButton{
+    background-color: rgb(250, 239, 231);
+    border: rgb(65, 49, 36);
+    border-radius: 0.5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 20px 10px 20px;
+}
+#SendButton{
+    background-color: rgb(250, 239, 231);
+    border: rgb(65, 49, 36);
+    border-radius: 0.5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 20px 10px 20px;
+}
+#name, #email{
+    background-color: rgb(250, 239, 231);
+    padding: 10px 30px 10px 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: rgb(65, 49, 36);
+    border-radius: 0.5%;
+}
+
+/* Orientiert am 414 x 896 [ Apple iPhone XS Max ] */
+@media only screen and (max-width: 600px) {
+    #top img{
+        width: 50%;
+    }
+    .Menu ul{
+        text-align: center;
+        margin-top: 0%;
+        padding: 10px 20px 10px 20px; 
+        background-color:rgb(238, 151, 151);
+        position: fixed;
+        top: 0;
+        border: rgb(185, 102, 102);
+    }
+    .Menu li {
+        display: inline;
+        list-style: none;
+        margin-right: 10px;
+        padding: 5px 10px;
+        background: rgb(238, 151, 151);
+    }
+    #WarenIcon{
+        background: rgb(65, 49, 36);
+        color: white;
+        position: fixed;
+        top: 5%;
+        left: 55%;
+        width: 40px;
+        height: 40px;
+        border-radius: 200px;
+        text-align: center;
+    }
+    .artikel{
+        width: 45%;
+        height: 40%;
+        text-align: center;
+        margin-top: 4%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        float: left;
+        background-color: rgb(188, 228, 238);
+    }
+    .artikel img{
+        width: 50%;
+    }
+   
+    .sidebarArtikel{
+        width: 100%;
+        height: 15%;
+        text-align: center;
+        margin-top: 4%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        background-color: rgb(194, 238, 188);
+    }
+    .sidebarArtikel img{
+        width: 70%;
+    }
+    .goToPrivate{
+        position: fixed;
+        bottom: 10px;
+        right: 5px;
+        
+    }
+    .fot li{
+        padding: 2%;
+    }
+    .fot img{
+        width: 20px;
+    }
+}
+/* Orientiert am 1024 x 1366 [ Apple iPad Pro ] */
+@media only screen and (max-width: 1024px) {
+    #WarenIcon{
+        background: rgb(65, 49, 36);
+        color: white;
+        position: fixed;
+        top: 2%;
+        left: 45%;
+        width: 40px;
+        height: 40px;
+        border-radius: 200px;
+        text-align: center;
+    }
+    #Auflistung{
+        width: 20%;
+        float: right;
+        position: rel;
+        z-index: 50;
+    }
+    .sidebarArtikel{
+        width: 100%;
+        height: 15%;
+        text-align: center;
+        margin-top: 4%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        background-color: rgb(194, 238, 188);
+    }
+    .sidebarArtikel img{
+        width: 70%;
+    }
+}

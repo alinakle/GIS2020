@@ -61,4 +61,21 @@ namespace Endaufgabe {
         localStorage.setItem("warenwert", JSON.stringify(neuerPreis));
         window.location.reload();
     }
+
+    let sendButton: HTMLElement = <HTMLElement>document.getElementById("SendButton");
+    sendButton?.addEventListener("click", handleSend);
+
+    let formData: FormData;
+
+    async function handleSend(): Promise<void> {
+
+        formData = new FormData(document.forms[0]);
+
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        let url: string = "https://gisak2020.herokuapp.com";
+        url = url + "/send";
+        url = url + "?" + query.toString();
+
+        await fetch(url);
+    }
 }

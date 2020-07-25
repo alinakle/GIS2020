@@ -1,64 +1,41 @@
 namespace Endaufgabe {
+    
+    let deleteAll: HTMLElement = <HTMLElement>document.getElementById("allesL");
+    let laden: HTMLElement = <HTMLElement>document.getElementById("besAnzeigen");
+    let serverAntwort: HTMLElement = <HTMLElement>document.getElementById("serverAntwort");
 
-    let liste: Artikel[] = JSON.parse(localStorage.getItem("liste")!);
-    let warenkorbDiv: HTMLElement = <HTMLElement> document.getElementById("WarenkorbInhalt");
+    deleteAll.addEventListener("click", handleDelete);
+    laden.addEventListener("click", handleLaden);
 
-    for (let i: number = 0; i < liste.length; i++) {
-
-        let divArtikel: HTMLElement = <HTMLElement>document.createElement("div");
-        divArtikel.setAttribute("class", "artikel");
-
-        let bild: HTMLElement = document.createElement("img");
-        bild.setAttribute("src", liste[i]._bild);
-        divArtikel.appendChild(bild);
-
-        let name: HTMLElement = document.createElement("h4");
-        name.innerHTML = liste[i]._name;
-        divArtikel.appendChild(name);
-
-        let preis: HTMLElement = document.createElement("p");
-        preis.innerHTML = "" + liste[i]._preis + "€";
-        divArtikel.appendChild(preis);
-
-        let inhalt: HTMLElement = document.createElement("p");
-        inhalt.innerHTML = liste[i]._inhalt;
-        divArtikel.appendChild(inhalt);
-
-        let loeschen: HTMLElement = document.createElement("button");
-        loeschen.innerHTML = "Entfernen";
-        divArtikel.appendChild(loeschen);
-        loeschen.setAttribute("index", "" + liste[i]);
-        loeschen.setAttribute("preis", "" + liste[i]._preis);
-        loeschen.addEventListener("click", handleEntfernen);
-
-        warenkorbDiv?.appendChild(divArtikel);
-    }
-
-    let wert: HTMLElement = <HTMLElement> JSON.parse(localStorage.getItem("warenwert")!);
-    let wertDiv: HTMLElement = <HTMLElement> document.getElementById("GesamtWert");
-    wertDiv.innerHTML = "" + wert + "€";
-
-    let button: HTMLElement = <HTMLElement> document.getElementById("EntfernenButton");
-    button.addEventListener("click", handleAllesEntfernen);
-
-    function handleAllesEntfernen(): void {
+    async function handleDelete(): Promise<void> {
         
-        localStorage.clear();
-        window.location.reload();
+        serverAntwort.innerHTML = "Alle Bestellungen gelöscht!";
+
+        let formData: FormData = new FormData(document.forms[0]);
+
+        // tslint:disable-next-line: no-any
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+
+        let url: string = "https://gispraktikum2020.herokuapp.com";
+        url = url + "/loeschen";
+        url = url + "?" + query.toString();
+
+        await fetch(url);
     }
 
-    function handleEntfernen(_event: Event): void {
+    async function handleLaden(): Promise<void> {
 
-        let geklickt: HTMLElement = <HTMLElement>_event.target;
-        let index: number = parseFloat(geklickt.getAttribute("index")!);
-        let neueListe: Artikel[] = JSON.parse(localStorage.getItem("liste")!);
-        neueListe.splice(index, 1);
-        localStorage.setItem("liste", JSON.stringify(neueListe));
+        let formData: FormData = new FormData(document.forms[0]);
 
-        let preis: number = parseFloat(geklickt.getAttribute("preis")!);
-        let neuerPreis: number = JSON.parse(localStorage.getItem("warenwert")!);
-        neuerPreis -= preis;
-        localStorage.setItem("warenwert", JSON.stringify(neuerPreis));
-        window.location.reload();
+        // tslint:disable-next-line: no-any
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+
+        let url: string = "https://gispraktikum2020.herokuapp.com";
+        url = url + "/laden";
+        url = url + "?" + query.toString();
+
+        let antwort: Response = await fetch(url);
+        let antwort2: string = await antwort.text();
+        serverAntwort.innerHTML = antwort2;
     }
 }
