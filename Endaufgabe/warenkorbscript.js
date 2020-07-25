@@ -49,7 +49,6 @@ var Endaufgabe;
     }
     let sendButton = document.getElementById("SendButton");
     sendButton?.addEventListener("click", handleSend);
-    let formData;
     async function handleSend() {
         let localStorageData = "";
         for (let index = 0; index < localStorage.length; index++) {
@@ -57,10 +56,12 @@ var Endaufgabe;
             let localValue = localStorage.getItem(localKey);
             localStorageData += localKey + "=" + localValue + "&";
         }
-        formData = new FormData(document.forms[0]);
-        let query = new URLSearchParams(formData);
+        let formData = new FormData(document.forms[0]);
         let url = "https://gisak2020.herokuapp.com";
-        url += "/send" + "?" + localStorageData + query.toString();
+        let query = new URLSearchParams(formData);
+        console.log(query.toString());
+        url += "/insert" + "?" + localStorageData + query.toString();
+        console.log(url);
         await fetch(url);
     }
 })(Endaufgabe || (Endaufgabe = {}));

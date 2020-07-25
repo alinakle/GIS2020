@@ -65,8 +65,6 @@ namespace Endaufgabe {
     let sendButton: HTMLElement = <HTMLElement>document.getElementById("SendButton");
     sendButton?.addEventListener("click", handleSend);
 
-    let formData: FormData;
-
     async function handleSend(): Promise<void> {
 
         let localStorageData: string = "";
@@ -76,13 +74,16 @@ namespace Endaufgabe {
 
             localStorageData += localKey + "=" + localValue + "&";
         }
-
-        formData = new FormData(document.forms[0]);
-
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        let formData: FormData = new FormData(document.forms[0]);
         let url: string = "https://gisak2020.herokuapp.com";
-        url += "/send" + "?" + localStorageData + query.toString(); 
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        
+        console.log(query.toString());
 
-        await fetch(url);
+        url += "/insert" + "?" + localStorageData + query.toString(); 
+
+        console.log(url);
+        
+        await fetch(url); 
     }
 }
