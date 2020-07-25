@@ -1,7 +1,7 @@
 namespace Endaufgabe {
 
     let liste: Artikel[] = JSON.parse(localStorage.getItem("liste")!);
-    let warenkorbDiv: HTMLElement = <HTMLElement> document.getElementById("Inhalt");
+    let warenkorbDiv: HTMLElement = <HTMLElement>document.getElementById("Inhalt");
 
     for (let i: number = 0; i < liste.length; i++) {
 
@@ -34,15 +34,15 @@ namespace Endaufgabe {
         warenkorbDiv?.appendChild(divArtikel);
     }
 
-    let wert: HTMLElement = <HTMLElement> JSON.parse(localStorage.getItem("warenwert")!);
-    let wertDiv: HTMLElement = <HTMLElement> document.getElementById("GesamtWert");
+    let wert: HTMLElement = <HTMLElement>JSON.parse(localStorage.getItem("warenwert")!);
+    let wertDiv: HTMLElement = <HTMLElement>document.getElementById("GesamtWert");
     wertDiv.innerHTML = "" + wert + "€";
 
-    let button: HTMLElement = <HTMLElement> document.getElementById("EntfernenButton");
+    let button: HTMLElement = <HTMLElement>document.getElementById("EntfernenButton");
     button.addEventListener("click", handleAllesEntfernen);
 
     function handleAllesEntfernen(): void {
-        
+
         localStorage.clear();
         window.location.reload();
     }
@@ -69,12 +69,19 @@ namespace Endaufgabe {
 
     async function handleSend(): Promise<void> {
 
+        let localStorageData: string = "";
+        for (let index: number = 0; index < localStorage.length; index++) {
+            let localKey: string = <string>localStorage.key(index);
+            let localValue: string = <string>localStorage.getItem(localKey);
+
+            localStorageData += localKey + "=" + localValue + "&";
+        }
+
         formData = new FormData(document.forms[0]);
 
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         let url: string = "https://gisak2020.herokuapp.com";
-        url = url + "/send";
-        url = url + "?" + query.toString();
+        url += "/send" + "?" + localStorageData + query.toString(); 
 
         await fetch(url);
     }

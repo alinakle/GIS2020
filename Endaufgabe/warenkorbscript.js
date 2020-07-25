@@ -51,11 +51,16 @@ var Endaufgabe;
     sendButton?.addEventListener("click", handleSend);
     let formData;
     async function handleSend() {
+        let localStorageData = "";
+        for (let index = 0; index < localStorage.length; index++) {
+            let localKey = localStorage.key(index);
+            let localValue = localStorage.getItem(localKey);
+            localStorageData += localKey + "=" + localValue + "&";
+        }
         formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
         let url = "https://gisak2020.herokuapp.com";
-        url = url + "/send";
-        url = url + "?" + query.toString();
+        url += "/send" + "?" + localStorageData + query.toString();
         await fetch(url);
     }
 })(Endaufgabe || (Endaufgabe = {}));
